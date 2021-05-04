@@ -16,7 +16,7 @@
 #include<math.h>
 #include<semaphore.h>
 #define PERM (S_IRUSR|S_IWUSR)
-#define TERMINATIONPERCENT 20
+#define TERMINATIONPERCENT 10
 #define WRITEPERCENT 33
 #define SEGFAULTPERCENT 5
 #define PAGESIZE 1024
@@ -47,7 +47,7 @@ typedef struct {
 	long mtype;
 	char mtext[100];
 }mymsg_t;
-/*
+
 int randomint(int lower,int upper)
 {
 	int num=(rand()%(upper-lower+1))+lower;
@@ -59,9 +59,8 @@ void advanceclock(systemclock_t *sc, int addsec,int addnsec)
 	sc->sec=(sc->sec+addsec)+((sc->nsec+addnsec)/1000000);
 	sc->nsec=(sc->nsec+addnsec)%1000000;
 }
-*/
-//int main(int argc,char**argv)
-int user_proc(int parm1, int parm2)
+
+int main(int argc,char**argv)
 {
 	systemclock_t *sc;
 	processcontrolblock_t *pcb;
@@ -69,10 +68,9 @@ int user_proc(int parm1, int parm2)
 	struct timespec tpchild;
 	int id;
 	int i;
-//	int logicalpid=atoi(argv[2]);
-    int logicalpid=parm2;
-//	int numprocesses=atoi(argv[1]);
-    int numprocesses=parm1;
+	int logicalpid=atoi(argv[2]);
+	int numprocesses=atoi(argv[1]);
+
     char* requesttype;
     char requeststring[100];
     int address;

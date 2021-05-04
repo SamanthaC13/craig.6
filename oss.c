@@ -23,9 +23,9 @@
 #define SEM_FLAGS (O_CREAT|O_EXCL)
 #define maxLogLen 10000
 #define PAGESIZE 1024
-#define FRAMES 128
+#define FRAMES 64
 #define CONCURRENTTASKS 18
-#define TOTALTASKS 40
+#define TOTALTASKS 25
 
 typedef struct{
 	unsigned int sec;
@@ -77,7 +77,7 @@ int totalmemaccesses=0;
 double totalproctime=0;
 int totalpgfaults=0;
 int totalsegfaults=0;
-
+void terminateproc(int proc);
 int timespec2str(char buf[], struct timespec ts)
 {
 	const int bufsize=31;
@@ -187,9 +187,6 @@ void printmemorymap()
         loglen++;
     }
 }
-
-void terminateproc(int proc);
-
 void cleanup()
 {
 	int i;
@@ -219,18 +216,18 @@ void cleanup()
 	if(totalmemaccesses==0)
 	    fprintf(logfile,"Total number of page faults per memory accesses: 0.0\n");	
     else
-	    fprintf(logfile,"Total number of page faults per memory accesses: %05.6f\n",(double)totalpgfaults/(double)totalmemaccesses;
-	fprintf(logfile,"Number of segmentation faults: %i\n",totalsegfaults);
-/*	fprintf(logfile,"Number of processes terminating successfully: %i\n",numtermsuccess);
-	fprintf(logfile,"Number of processes terminated by deadlock recovery: %i\n",numtermdeadlock);
-	fprintf(logfile,"Number of times deadlock detection ran: %i\n",numdeadlockrun);
-	fprintf(logfile,"Number of processes in deadlock: %i\n",numdeadlockprocs);
-	fprintf(logfile,"Number of deadlocks detected: %i\n",numdeadlocks);
-	if(numdeadlocks==0)
-	    fprintf(logfile,"Average number of processes killed per deadlock: 0.0\n");	
+	    fprintf(logfile,"Total number of page faults per memory accesses: %05.6f\n",(double)totalpgfaults/(double)totalmemaccesses);
+	if(totalmemaccesses==0)
+	    fprintf(logfile,"Total average memory access speed: 0.0\n");	
     else
-	    fprintf(logfile,"Average number of processes killed per deadlock: %05.6f\n",(double)numtermdeadlock/(double)numdeadlocks);	
-*/	
+	    fprintf(logfile,"Total average memory access speed: %05.6f\n",(double)totalproctime/(double)totalmemaccesses);
+	fprintf(logfile,"Number of segmentation faults: %i\n",totalsegfaults);
+	if(totalmemaccesses==0)
+		fprintf(logfile,"Total number of seg faults per memory access: 0.0\n");
+	else
+		fprintf(logfile,"Total number of seg faults per memory access: %05.6f\n",(double)totalsegfaults/(double)totalmemaccesses);
+
+
 	fprintf(stderr,"Clean up started\n");
 
 	if(shmdt(sc)==-1)
@@ -381,15 +378,18 @@ void printprocstats(int proc)
 	fprintf(logfile,"   Number of memory accesses: %i\n",pcb[proc].nummemaccesses);
 	fprintf(logfile,"   Time in process: %05.6f\n",totaltime);
 	if(totaltime==0)
-	    fprintf(logfile,"   Number of memory accesses per second: 0.0\n");	
-    else
-	    fprintf(logfile,"   Number of memory accesses per second: %05.6f\n",(double)pcb[proc].nummemaccesses/(double)totaltime);	
-	fprintf(logfile,"   Number of page faults: %i\n",pcb[proc].numpgfaults);
+		fprintf(logfile,"   Number of memory accesses per second: 0.0\n");
+	else
+		fprintf(logfile,"   Number of memory accesses per second: %05.6f\n",(double)pcb[proc].nummemaccesses/(double)totaltime);
+  fprintf(logfile,"   Number of page faults: %i\n",pcb[proc].numpgfaults);
 	if(pcb[proc].nummemaccesses==0)
 	    fprintf(logfile,"   Number of page faults per memory accesses: 0.0\n");	
     else
-	    fprintf(logfile,"   Number of page faults per memory accesses: %05.6f\n",(double)pcb[proc].numpgfaults/(double)pcb[proc].nummemaccesses;
-    
+	    fprintf(logfile,"   Number of page faults per memory accesses: %05.6f\n",(double)pcb[proc].numpgfaults/(double)pcb[proc].nummemaccesses);
+  if(pcb[proc].nummemaccesses==0)
+		fprintf(logfile,"   Average memory access speed: 0.0\n");
+	else
+		fprintf(logfile,"   Average memory access speed: %05.6f\n",(double)totaltime/(double)pcb[proc].nummemaccesses);
 }
 
 void terminateproc(int proc)
@@ -509,10 +509,8 @@ int loadpage(int proc, int pg)
 
 void help()
 {
-	printf("This program is a memory management simulator...");
-	printf("  ");
-	printf("  ");
-	printf("  ");
+	printf("This program is a memory management simulator with two options h and p, h is for help and p is to specify the number of user processes the oss will spawn.");
+	printf("Each user process randomly decides how much memory the processes needs then the oss grants memory requests from users processes");
 }
 
 int main(int argc,char**argv)
@@ -542,10 +540,10 @@ int main(int argc,char**argv)
 			case 'h':
 				help();
 				break;
-            case 'p':
-                p = atoi(optarg);
-                break;
-            default:
+      case 'p':
+        p = atoi(optarg);
+        break;
+		  default:
 				perror("Usage: Unknown option ");
 				exit(EXIT_FAILURE);
 		}
@@ -666,6 +664,7 @@ int main(int argc,char**argv)
 	int nsec=0;
 	int x=0;
 	char numString[10];
+	char numString2[10];
 	char* token;
 	char* requesttype;
 	int reqproc;
@@ -700,12 +699,11 @@ int main(int argc,char**argv)
 			}
 			if(childpid==0)
 			{
-				//sprintf(numString,"%d",nextpid);
-				//execl("./user","user",numString,NULL);
-				//perror("Failed to exec to user");
-				//abnormalterm();
-				user_proc(CONCURRENTTASKS,nextpid);
-				return 1;
+				sprintf(numString,"%d",CONCURRENTTASKS);
+				sprintf(numString2,"%d",nextpid);
+				execl("./user_proc","user_proc",numString,numString2,NULL);
+				perror("Failed to exec to user");
+				abnormalterm();
 			}
 			//parent code
 			if(loglen<maxLogLen)

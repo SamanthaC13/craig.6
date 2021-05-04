@@ -1,0 +1,518 @@
+Current memory map at time 0:000000
+000-064: ................................................................
+Master: Current system clock time is 0:000010
+Master has created process 0(29816)
+Master: P0 requesting read of address 19121 at time 0:000010
+Master: P0 address 19121 is not in a frame, pagefault
+Master: Current system clock time is 0:000020
+Processing request from P0 from wait queue
+Master: Loading P0 page 18 in frame 0
+Master: Address 19121 in frame 0, giving data to P0 at time 0:000020
+Master sent message to process 0(29816)
+Master: Current system clock time is 0:000030
+Master: P0 requesting read of address 12127 at time 0:000030
+Master: P0 address 12127 is not in a frame, pagefault
+Master: Current system clock time is 0:000040
+Master has created process 1(29818)
+Master: P1 requesting read of address 14297 at time 0:000040
+Master: P1 address 14297 is not in a frame, pagefault
+Master: Current system clock time is 0:000050
+Processing request from P0 from wait queue
+Master: Loading P0 page 11 in frame 1
+Master: Address 14297 in frame 1, giving data to P0 at time 0:000050
+Master sent message to process 0(29816)
+Master: Current system clock time is 0:000060
+Processing request from P1 from wait queue
+Master: Loading P1 page 13 in frame 2
+Master: Address -1 in frame 2, writing data to frame at time 0:000060
+Master sent message to process 1(29818)
+Master: P0 requesting write of address 8369 at time 0:000060
+Master: P0 address 8369 is not in a frame, pagefault
+Master: Current system clock time is 0:000070
+Master: Current system clock time is 0:000080
+Processing request from P0 from wait queue
+Master: Loading P0 page 8 in frame 3
+Master: Address -1 in frame 3, writing data to frame at time 0:000080
+Master sent message to process 0(29816)
+Master: P1 requesting read of address 6756 at time 0:000080
+Master: P1 address 6756 is not in a frame, pagefault
+Master: Current system clock time is 0:000090
+Master has created process 2(29822)
+Processing request from P1 from wait queue
+Master: Loading P1 page 6 in frame 4
+Master: Address 6756 in frame 4, giving data to P1 at time 0:000090
+Master sent message to process 1(29818)
+Master: P0 requesting write of address 7507 at time 0:000090
+Master: P0 address 7507 is not in a frame, pagefault
+Master: Current system clock time is 0:000100
+Master has created process 3(29825)
+Processing request from P0 from wait queue
+Master: Loading P0 page 7 in frame 5
+Master: Address 7507 in frame 5, writing data to frame at time 0:000100
+Master sent message to process 0(29816)
+Master: P2 requesting read of address 804 at time 0:000100
+Master: P2 address 804 is not in a frame, pagefault
+Master: Current system clock time is 0:000110
+Master: P1 requesting write of address 7446 at time 0:000110
+Master: P1 address 7446 is not in a frame, pagefault
+Master: Current system clock time is 0:000120
+Master has created process 4(29826)
+Processing request from P2 from wait queue
+Master: Loading P2 page 0 in frame 6
+Master: Address 7446 in frame 6, writing data to frame at time 0:000120
+Master sent message to process 2(29822)
+Master: P3 requesting write of address 29424 at time 0:000120
+Master: P3 generating segmentation fault, killing process time 0:000120
+Termination statistics for process3(29825)
+   Number of memory accesses: 0
+   Time in process: 0.000020
+   Number of memory accesses per second: 0.000000
+   Number of page faults: 0
+   Number of page faults per memory accesses: 0.0
+   Average memory access speed: 0.0
+Master: Current system clock time is 0:000130
+Master has created process 3(29828)
+Processing request from P1 from wait queue
+Master: Loading P1 page 7 in frame 7
+Master: Address 29424 in frame 7, writing data to frame at time 0:000130
+Master sent message to process 1(29818)
+Master: P0 requesting read of address 14857 at time 0:000130
+Master: P0 address 14857 is not in a frame, pagefault
+Master: Current system clock time is 0:000140
+Master: P4 requesting read of address 923 at time 0:000140
+Master: P4 address 923 is not in a frame, pagefault
+Master: Current system clock time is 0:000150
+Processing request from P0 from wait queue
+Master: Loading P0 page 14 in frame 8
+Master: Address 923 in frame 8, giving data to P0 at time 0:000150
+Master sent message to process 0(29816)
+Master: P2 requesting read of address 2426 at time 0:000150
+Master: P2 address 2426 is not in a frame, pagefault
+Master: Current system clock time is 0:000160
+Processing request from P4 from wait queue
+Master: Loading P4 page 0 in frame 9
+Master: Address 2426 in frame 9, giving data to P4 at time 0:000160
+Master sent message to process 4(29826)
+Master: P3 requesting read of address 2304 at time 0:000160
+Master: P3 generating segmentation fault, killing process time 0:000160
+Termination statistics for process3(29828)
+   Number of memory accesses: 0
+   Time in process: 0.000030
+   Number of memory accesses per second: 0.000000
+   Number of page faults: 0
+   Number of page faults per memory accesses: 0.0
+   Average memory access speed: 0.0
+Master: Current system clock time is 0:000170
+Master has created process 3(29830)
+Processing request from P2 from wait queue
+Master: Loading P2 page 2 in frame 10
+Master: Address 2304 in frame 10, giving data to P2 at time 0:000170
+Master sent message to process 2(29822)
+Master: P1 requesting read of address 3008 at time 0:000170
+Master: P1 address 3008 is not in a frame, pagefault
+Master: Current system clock time is 0:000180
+Master has created process 5(29834)
+Master: P0 requesting read of address 9452 at time 0:000180
+Master: P0 address 9452 is not in a frame, pagefault
+Master: Current system clock time is 0:000190
+Master has created process 6(29837)
+Processing request from P1 from wait queue
+Master: Loading P1 page 2 in frame 11
+Master: Address 9452 in frame 11, giving data to P1 at time 0:000190
+Master sent message to process 1(29818)
+Master: P4 requesting write of address 4558 at time 0:000190
+Master: P4 address 4558 is not in a frame, pagefault
+Master: Current system clock time is 0:000200
+Master has created process 7(29852)
+Processing request from P0 from wait queue
+Master: Loading P0 page 9 in frame 12
+Master: Address 4558 in frame 12, writing data to frame at time 0:000200
+Master sent message to process 0(29816)
+Master: P3 is indicating termination at time 0:000200
+Termination statistics for process3(29830)
+   Number of memory accesses: 0
+   Time in process: 0.000030
+   Number of memory accesses per second: 0.000000
+   Number of page faults: 0
+   Number of page faults per memory accesses: 0.0
+   Average memory access speed: 0.0
+Master: Current system clock time is 0:000210
+Master has created process 3(29854)
+Master: P2 requesting read of address 229 at time 0:000210
+Master: Address 229 in frame 6, giving data to P2 at time 0:000210
+Master sent message to process 2(29822)
+Master: Current system clock time is 0:000220
+Master has created process 8(29857)
+Processing request from P4 from wait queue
+Master: Loading P4 page 4 in frame 13
+Master: Address 229 in frame 13, writing data to frame at time 0:000220
+Master sent message to process 4(29826)
+Master: P5 requesting write of address 9416 at time 0:000220
+Master: P5 address 9416 is not in a frame, pagefault
+Master: Current system clock time is 0:000230
+Master has created process 9(29859)
+Processing request from P5 from wait queue
+Master: Loading P5 page 9 in frame 14
+Master: Address 9416 in frame 14, writing data to frame at time 0:000230
+Master sent message to process 5(29834)
+Master: P6 requesting write of address 8271 at time 0:000230
+Master: P6 address 8271 is not in a frame, pagefault
+Master: Current system clock time is 0:000240
+Processing request from P6 from wait queue
+Master: Loading P6 page 8 in frame 15
+Master: Address 8271 in frame 15, writing data to frame at time 0:000240
+Master sent message to process 6(29837)
+Master: P1 requesting read of address 13278 at time 0:000240
+Master: P1 address 13278 is not in a frame, pagefault
+Master: Current system clock time is 0:000250
+Master has created process 10(29862)
+Master: P7 requesting read of address 25928 at time 0:000250
+Master: P7 address 25928 is not in a frame, pagefault
+Master: Current system clock time is 0:000260
+Processing request from P1 from wait queue
+Master: Loading P1 page 12 in frame 16
+Master: Address 25928 in frame 16, giving data to P1 at time 0:000260
+Master sent message to process 1(29818)
+Master: P0 requesting read of address 19963 at time 0:000260
+Master: P0 address 19963 is not in a frame, pagefault
+Master: Current system clock time is 0:000270
+Master has created process 11(29863)
+Processing request from P7 from wait queue
+Master: Loading P7 page 25 in frame 17
+Master: Address 19963 in frame 17, giving data to P7 at time 0:000270
+Master sent message to process 7(29852)
+Master: P3 requesting read of address 4996 at time 0:000270
+Master: P3 address 4996 is not in a frame, pagefault
+Master: Current system clock time is 0:000280
+Master: P2 requesting read of address 2163 at time 0:000280
+Master: Address 2163 in frame 10, giving data to P2 at time 0:000280
+Master sent message to process 2(29822)
+Master: Current system clock time is 0:000290
+Processing request from P0 from wait queue
+Master: Loading P0 page 19 in frame 18
+Master: Address 2163 in frame 18, writing data to frame at time 0:000290
+Master sent message to process 0(29816)
+Master: P8 requesting read of address 2056 at time 0:000290
+Master: P8 address 2056 is not in a frame, pagefault
+Master: Current system clock time is 0:000300
+Processing request from P3 from wait queue
+Master: Loading P3 page 4 in frame 19
+Master: Address 2056 in frame 19, giving data to P3 at time 0:000300
+Master sent message to process 3(29854)
+Master: P4 requesting write of address 6216 at time 0:000300
+Master: P4 address 6216 is not in a frame, pagefault
+Master: Current system clock time is 0:000310
+Master has created process 12(29865)
+Processing request from P8 from wait queue
+Master: Loading P8 page 2 in frame 20
+Master: Address 6216 in frame 20, writing data to frame at time 0:000310
+Master sent message to process 8(29857)
+Master: P9 requesting read of address 14509 at time 0:000310
+Master: P9 generating segmentation fault, killing process time 0:000310
+Termination statistics for process9(29859)
+   Number of memory accesses: 0
+   Time in process: 0.000080
+   Number of memory accesses per second: 0.000000
+   Number of page faults: 0
+   Number of page faults per memory accesses: 0.0
+   Average memory access speed: 0.0
+Master: Current system clock time is 0:000320
+Master: P6 requesting read of address 12561 at time 0:000320
+Master: P6 address 12561 is not in a frame, pagefault
+Master: Current system clock time is 0:000330
+Processing request from P4 from wait queue
+Master: Loading P4 page 6 in frame 21
+Master: Address 12561 in frame 21, giving data to P4 at time 0:000330
+Master sent message to process 4(29826)
+Master: P5 requesting read of address 9246 at time 0:000330
+Master: Address 9246 in frame 14, giving data to P5 at time 0:000330
+Master sent message to process 5(29834)
+Master: Current system clock time is 0:000340
+Processing request from P6 from wait queue
+Master: Loading P6 page 12 in frame 22
+Master: Address 9246 in frame 22, writing data to frame at time 0:000340
+Master sent message to process 6(29837)
+Master: P10 requesting read of address 10041 at time 0:000340
+Master: P10 address 10041 is not in a frame, pagefault
+Master: Current system clock time is 0:000350
+Master has created process 9(29867)
+Master: P1 requesting read of address 854 at time 0:000350
+Master: P1 address 854 is not in a frame, pagefault
+Master: Current system clock time is 0:000360
+Processing request from P10 from wait queue
+Master: Loading P10 page 9 in frame 23
+Master: Address 854 in frame 23, giving data to P10 at time 0:000360
+Master sent message to process 10(29862)
+Master: P11 requesting read of address 14928 at time 0:000360
+Master: P11 address 14928 is not in a frame, pagefault
+Master: Current system clock time is 0:000370
+Processing request from P1 from wait queue
+Master: Loading P1 page 0 in frame 24
+Master: Address 14928 in frame 24, giving data to P1 at time 0:000370
+Master sent message to process 1(29818)
+Master: P0 requesting read of address 2632 at time 0:000370
+Master: P0 address 2632 is not in a frame, pagefault
+Master: Current system clock time is 0:000380
+Processing request from P11 from wait queue
+Master: Loading P11 page 14 in frame 25
+Master: Address 2632 in frame 25, giving data to P11 at time 0:000380
+Master sent message to process 11(29863)
+Master: P2 requesting read of address 5671 at time 0:000380
+Master: P2 address 5671 is not in a frame, pagefault
+Master: Current system clock time is 0:000390
+Master has created process 13(29869)
+Master: P3 requesting read of address 3941 at time 0:000390
+Master: P3 address 3941 is not in a frame, pagefault
+Master: Current system clock time is 0:000400
+Master has created process 14(29871)
+Processing request from P0 from wait queue
+Master: Loading P0 page 2 in frame 26
+Master: Address 3941 in frame 26, giving data to P0 at time 0:000400
+Master sent message to process 0(29816)
+Master: P7 requesting write of address 19197 at time 0:000400
+Master: P7 address 19197 is not in a frame, pagefault
+Master: Current system clock time is 0:000410
+Master has created process 15(29872)
+Processing request from P2 from wait queue
+Master: Loading P2 page 5 in frame 27
+Master: Address 19197 in frame 27, writing data to frame at time 0:000410
+Master sent message to process 2(29822)
+Master: P12 is indicating termination at time 0:000410
+Termination statistics for process12(29865)
+   Number of memory accesses: 0
+   Time in process: 0.000100
+   Number of memory accesses per second: 0.000000
+   Number of page faults: 0
+   Number of page faults per memory accesses: 0.0
+   Average memory access speed: 0.0
+Master: Current system clock time is 0:000420
+Master has created process 12(29874)
+Master: P8 requesting write of address 21715 at time 0:000420
+Master: P8 address 21715 is not in a frame, pagefault
+Master: Current system clock time is 0:000430
+Master has created process 16(29876)
+Processing request from P3 from wait queue
+Master: Loading P3 page 3 in frame 28
+Master: Address 21715 in frame 28, writing data to frame at time 0:000430
+Master sent message to process 3(29854)
+Master: P4 requesting read of address 5754 at time 0:000430
+Master: P4 address 5754 is not in a frame, pagefault
+Master: Current system clock time is 0:000440
+Processing request from P7 from wait queue
+Master: Loading P7 page 18 in frame 29
+Master: Address 5754 in frame 29, giving data to P7 at time 0:000440
+Master sent message to process 7(29852)
+Master: P5 requesting write of address 5046 at time 0:000440
+Master: P5 address 5046 is not in a frame, pagefault
+Master: Current system clock time is 0:000450
+Master has created process 17(29878)
+Processing request from P8 from wait queue
+Master: Loading P8 page 21 in frame 30
+Master: Address 5046 in frame 30, writing data to frame at time 0:000450
+Master sent message to process 8(29857)
+Master: P6 requesting write of address 20210 at time 0:000450
+Master: P6 address 20210 is not in a frame, pagefault
+Master: Current system clock time is 0:000460
+Master: P9 requesting write of address 31269 at time 0:000460
+Master: P9 address 31269 is not in a frame, pagefault
+Master: Current system clock time is 0:000470
+Processing request from P4 from wait queue
+Master: Loading P4 page 5 in frame 31
+Master: Address 31269 in frame 31, writing data to frame at time 0:000470
+Master sent message to process 4(29826)
+Master: P1 requesting read of address 8777 at time 0:000470
+Master: P1 address 8777 is not in a frame, pagefault
+Master: Current system clock time is 0:000480
+Processing request from P5 from wait queue
+Master: Loading P5 page 4 in frame 32
+Master: Address 8777 in frame 32, giving data to P5 at time 0:000480
+Master sent message to process 5(29834)
+Master: P10 requesting read of address 25151 at time 0:000480
+Master: P10 address 25151 is not in a frame, pagefault
+Master: Current system clock time is 0:000490
+Master: P11 requesting read of address 7435 at time 0:000490
+Master: P11 address 7435 is not in a frame, pagefault
+Master: Current system clock time is 0:000500
+Processing request from P6 from wait queue
+Master: Loading P6 page 19 in frame 33
+Master: Address 7435 in frame 33, giving data to P6 at time 0:000500
+Master sent message to process 6(29837)
+Master: P13 requesting read of address 8519 at time 0:000500
+Master: P13 address 8519 is not in a frame, pagefault
+Master: Current system clock time is 0:000510
+Processing request from P9 from wait queue
+Master: Loading P9 page 30 in frame 34
+Master: Address 8519 in frame 34, giving data to P9 at time 0:000510
+Master sent message to process 9(29867)
+Master: P14 requesting read of address 277 at time 0:000510
+Master: P14 address 277 is not in a frame, pagefault
+Master: Current system clock time is 0:000520
+Processing request from P1 from wait queue
+Master: Loading P1 page 8 in frame 35
+Master: Address 277 in frame 35, giving data to P1 at time 0:000520
+Master sent message to process 1(29818)
+Master: P0 requesting read of address 24334 at time 0:000520
+Master: P0 generating segmentation fault, killing process time 0:000520
+Termination statistics for process0(29816)
+   Number of memory accesses: 16
+   Time in process: 0.000510
+   Number of memory accesses per second: 31372.549020
+   Number of page faults: 8
+   Number of page faults per memory accesses: 0.500000
+   Average memory access speed: 0.000032
+Master: Current system clock time is 0:000530
+Master has created process 0(29880)
+Master: P15 is indicating termination at time 0:000530
+Termination statistics for process15(29872)
+   Number of memory accesses: 0
+   Time in process: 0.000120
+   Number of memory accesses per second: 0.000000
+   Number of page faults: 0
+   Number of page faults per memory accesses: 0.0
+   Average memory access speed: 0.0
+Master: Current system clock time is 0:000540
+Master has created process 15(29881)
+Processing request from P10 from wait queue
+Master: Loading P10 page 24 in frame 36
+Master: Address -1 in frame 36, writing data to frame at time 0:000540
+Master sent message to process 10(29862)
+Master: P2 requesting read of address 465 at time 0:000540
+Master: Address 465 in frame 6, giving data to P2 at time 0:000540
+Master sent message to process 2(29822)
+Master: Current system clock time is 0:000550
+Termination statistics for process0(29880)
+   Number of memory accesses: 0
+   Time in process: 0.000020
+   Number of memory accesses per second: 0.000000
+   Number of page faults: 0
+   Number of page faults per memory accesses: 0.0
+   Average memory access speed: 0.0
+Termination statistics for process1(29818)
+   Number of memory accesses: 14
+   Time in process: 0.000510
+   Number of memory accesses per second: 27450.980392
+   Number of page faults: 7
+   Number of page faults per memory accesses: 0.500000
+   Average memory access speed: 0.000036
+Termination statistics for process2(29822)
+   Number of memory accesses: 9
+   Time in process: 0.000460
+   Number of memory accesses per second: 19565.217391
+   Number of page faults: 3
+   Number of page faults per memory accesses: 0.333333
+   Average memory access speed: 0.000051
+Termination statistics for process3(29854)
+   Number of memory accesses: 4
+   Time in process: 0.000340
+   Number of memory accesses per second: 11764.705882
+   Number of page faults: 2
+   Number of page faults per memory accesses: 0.500000
+   Average memory access speed: 0.000085
+Termination statistics for process4(29826)
+   Number of memory accesses: 8
+   Time in process: 0.000430
+   Number of memory accesses per second: 18604.651163
+   Number of page faults: 4
+   Number of page faults per memory accesses: 0.500000
+   Average memory access speed: 0.000054
+Termination statistics for process5(29834)
+   Number of memory accesses: 5
+   Time in process: 0.000370
+   Number of memory accesses per second: 13513.513514
+   Number of page faults: 2
+   Number of page faults per memory accesses: 0.400000
+   Average memory access speed: 0.000074
+Termination statistics for process6(29837)
+   Number of memory accesses: 6
+   Time in process: 0.000360
+   Number of memory accesses per second: 16666.666667
+   Number of page faults: 3
+   Number of page faults per memory accesses: 0.500000
+   Average memory access speed: 0.000060
+Termination statistics for process7(29852)
+   Number of memory accesses: 4
+   Time in process: 0.000350
+   Number of memory accesses per second: 11428.571429
+   Number of page faults: 2
+   Number of page faults per memory accesses: 0.500000
+   Average memory access speed: 0.000088
+Termination statistics for process8(29857)
+   Number of memory accesses: 4
+   Time in process: 0.000330
+   Number of memory accesses per second: 12121.212121
+   Number of page faults: 2
+   Number of page faults per memory accesses: 0.500000
+   Average memory access speed: 0.000082
+Termination statistics for process9(29867)
+   Number of memory accesses: 2
+   Time in process: 0.000200
+   Number of memory accesses per second: 10000.000000
+   Number of page faults: 1
+   Number of page faults per memory accesses: 0.500000
+   Average memory access speed: 0.000100
+Termination statistics for process10(29862)
+   Number of memory accesses: 4
+   Time in process: 0.000300
+   Number of memory accesses per second: 13333.333333
+   Number of page faults: 2
+   Number of page faults per memory accesses: 0.500000
+   Average memory access speed: 0.000075
+Termination statistics for process11(29863)
+   Number of memory accesses: 2
+   Time in process: 0.000280
+   Number of memory accesses per second: 7142.857143
+   Number of page faults: 2
+   Number of page faults per memory accesses: 1.000000
+   Average memory access speed: 0.000140
+Termination statistics for process12(29874)
+   Number of memory accesses: 0
+   Time in process: 0.000130
+   Number of memory accesses per second: 0.000000
+   Number of page faults: 0
+   Number of page faults per memory accesses: 0.0
+   Average memory access speed: 0.0
+Termination statistics for process13(29869)
+   Number of memory accesses: 0
+   Time in process: 0.000160
+   Number of memory accesses per second: 0.000000
+   Number of page faults: 1
+   Number of page faults per memory accesses: 0.0
+   Average memory access speed: 0.0
+Termination statistics for process14(29871)
+   Number of memory accesses: 0
+   Time in process: 0.000150
+   Number of memory accesses per second: 0.000000
+   Number of page faults: 1
+   Number of page faults per memory accesses: 0.0
+   Average memory access speed: 0.0
+Termination statistics for process15(29881)
+   Number of memory accesses: 0
+   Time in process: 0.000010
+   Number of memory accesses per second: 0.000000
+   Number of page faults: 0
+   Number of page faults per memory accesses: 0.0
+   Average memory access speed: 0.0
+Termination statistics for process16(29876)
+   Number of memory accesses: 0
+   Time in process: 0.000120
+   Number of memory accesses per second: 0.000000
+   Number of page faults: 0
+   Number of page faults per memory accesses: 0.0
+   Average memory access speed: 0.0
+Termination statistics for process17(29878)
+   Number of memory accesses: 0
+   Time in process: 0.000100
+   Number of memory accesses per second: 0.000000
+   Number of page faults: 0
+   Number of page faults per memory accesses: 0.0
+   Average memory access speed: 0.0
+Current memory map at time 0:000550
+000-064: +++++++++++++++++++++++++++++++++++++...........................
+Total number of memory accesses: 78
+Total amount of time in processes: 0.005510
+Total number of memory accesses per second: 14156.079855
+Number of page faults: 40
+Total number of page faults per memory accesses: 0.512821
+Total average memory access speed: 0.000071
+Number of segmentation faults: 4
+Total number of seg faults per memory access: 0.051282
